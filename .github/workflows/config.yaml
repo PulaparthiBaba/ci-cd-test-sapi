@@ -30,6 +30,9 @@ jobs:
 
       - name: Run Munits
         run: mvn clean test
-        
+
       - name: Package Mule project
         run: mvn clean package
+
+      - name: Deploy application
+        run: mvn clean deploy -DmuleDeploy
